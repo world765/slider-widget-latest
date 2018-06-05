@@ -1,0 +1,75 @@
+body {
+  overflow:hidden;
+}
+input[type=range]::-moz-range-thumb {
+
+  width: 25px;
+  height: 25px;
+  border: 0;
+  border-radius: 50%;
+  background: #333333;
+  cursor: pointer;
+  transition: background .15s ease-in-out;
+}
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  background: transparent; /* Otherwise white in Chrome */
+  outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+
+  -webkit-appearance: none;
+  margin-top: -10px;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  height:  5px;
+  cursor: pointer;
+  background: #999999;
+}
+input[type=range]::-ms-thumb {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  height:  5px;
+  cursor: pointer;
+  background: #999999;
+}
+input[type=range]::-ms-ticks {
+  background-color: transparent;
+}
+section {
+  font-family: "Helvetica Neue";
+}
+input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+.span {
+  align: right;
+}
+h3 {
+  font-size: 35px;
+  font-family: "Roboto", sans-serif;
+  text-align: "center";
+}
+h4 {
+  font-size: 5px;
+}
+.fadeOuts {
+  opacity: 0;
+}
+.amount {
+  text-align: center;
+}
+.defaultMobileLabel {
+  font-size: 35px;
+}
