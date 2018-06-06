@@ -1,4 +1,4 @@
-var savings = document.getElementById("buyerPrice");
+var srebate = document.getElementById("buyerPrice");
 rebate.addEventListener("input", savingListener);
 
 function numericFormat(a) {
