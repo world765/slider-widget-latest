@@ -1,20 +1,5 @@
-var valued
-function sallersavings() {
-  var value = $(".homesavings").value;
-  $(".value").html(value);
-  return value;
-};
-$(".butt").click(function() {
-  $(".value").html("Hello");
-});
-var slider = document.getElementById("price");
-slider.addEventListener('input', sliderChange);
-
-var savings = document.getElementById("sallerPrice");
-savings.addEventListener("input", savingListener);
-
-var rebate = document.getElementById("buyerPrice")
-rebate.addEventListener("input", rebateListener);
+var savings = document.getElementById("buyerPrice");
+rebate.addEventListener("input", savingListener);
 
 function numericFormat(a) {
   a = a.toString();
@@ -38,15 +23,9 @@ function labelPosition(a) {
   var newPosition;
   var traveled;
   var inputSize = $("input").width();
-  if (a == "default") {
-    traveled = ((slider.value -slider.min)/(slider.max - slider.min));
-  }
-  if (a == "buyer") {
-    traveled = ((rebate.value -slider.min)/(slider.max - slider.min));
-  }
-  if  (a == "saller") {
-    traveled = ((savings.value -slider.min)/(slider.max - slider.min));
-  };
+
+    traveled = ((rebate.value - rebate.min)/(rebate.max - rebate.min));
+ 
   $("." + a + "StagnantLabel").html('<span class = "'+ a +'ValueMin">$200,000</span> <span class = "'+ a +'ValueMax" style = "margin-left:'+(inputSize - 150)+'px ">$2,000,000</span>');
   if (traveled * inputSize <= 100) {
     $("." + a + "ValueMin").addClass("fadeOuts");
