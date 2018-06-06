@@ -1,5 +1,5 @@
 var rebate = document.getElementById("buyerPrice");
-rebate.addEventListener("input", savingListener);
+rebate.addEventListener("input", rebateListener);
 
 function numericFormat(a) {
   a = a.toString();
